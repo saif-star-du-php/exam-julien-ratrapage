@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <h1>Liste des figurines</h1>
+  <div class="row">
+    {% for f in figurines %}
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <a href="{{ path('app_figurine_show', {id: f.id}) }}">
+            <img src="{{ f.imageName }}" class="card-img-top" style="width:250px; height:auto;" alt="{{ f.title }}">
+          </a>
+          <div class="card-body">
+            <h5>{{ f.title }}</h5>
+            <p>{{ f.price|number_format(2, ',', ' ') }} €</p>
+            <p>Publié {{ f.createdAt|date('d/m/Y') }} par {{ f.author.firstname }}</p>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <p>Aucune figurine trouvée.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

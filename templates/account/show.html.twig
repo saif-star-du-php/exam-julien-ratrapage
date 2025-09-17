@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Profile' %}
+
+{% block body %}
+    <div class = "row">
+        <div class = "col-md-6 mx-auto text-center">
+            <h1>{{ 'accountShow.profile' |trans }}</h1>
+            <br>
+            <img style="max-width: 250px;" src={{ vich_uploader_asset(app.user, 'imageFile') }}>
+            <p>{{ app.user.email }}</p>
+            <h2>{{ app.user.firstname ~" "~ app.user.lastname }}</h2>
+            <p>{{ 'accountShow.Accountcreatedon' |trans }} {{ app.user.createdAt |date("d/m/Y") }}</p>
+            <br>
+            <p>
+                <a class = "btn btn-primary btn-sm" href={{ path('app_account_edit') }}>{{ 'accountShow.EditAccount' |trans }}</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

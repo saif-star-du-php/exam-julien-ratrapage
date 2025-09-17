@@ -1,0 +1,51 @@
+vich_uploader.form_label.delete_confirm: 'Supprimer?'
+vich_uploader.link.download: Télécharger
+recipeForm.title: Titre
+recipeForm.content: Description
+recipeForm.duration: 'Durée en minutes'
+recipeForm.imageName: "Lien de l'Image"
+recipeForm.save: Enregistrer
+navBar.home: Accueil
+navBar.recipes: 'Liste des Recettes'
+navBar.addRecipe: 'Ajouter une recette'
+navBar.signUp: "S'enregistrer"
+navBar.logout: 'Se déconnecter'
+navBar.login: 'Se connecter'
+navBar.account: 'Mon compte'
+registerTemplate.title: Inscription
+registerTemplate.button: "S'enregistrer"
+registrationForm.firstname: Prénom
+registrationForm.lastname: Nom
+registrationForm.email: 'Adresse électronique'
+registrationForm.password: 'Mot de Passe'
+registrationForm.agreeTerms: 'Accepter les termes'
+recipeController.emailNotVerified: "Ton adresse mail n'est pas vérifiée !"
+recipeController.edit.confirmEmail: 'Vous devez confirmer votre adresse mail pour éditer une recette !'
+recipeController.edit.userRecipe1: 'Vous devez être '
+recipeController.edit.userRecipe2: ' pour editer cette recette !'
+recipeController.edit.mustLogin: 'Vous devez vous identifier pour editer une recette !'
+recipeController.edit.recipeEditConfirm: 'La recette a bien été modifiée !'
+recipeController.create.mustConfirmEmail: 'Vous devez confirmer votre adresse mail pour créer une recette !'
+recipeController.create.mustLogin: 'Vous devez vous identifier pour créer une recette !'
+recipeController.create.p1: 'La recette '
+recipeController.create.p2: ' a bien été créée'
+recipeController.index.emailNotVerified: "Votre compte n'est pas vérifié"
+accountShow.profile: 'Mon Profil'
+accountShow.Accountcreatedon: 'Date de création du compte : '
+accountShow.EditAccount: 'Modifier le compte'
+'You are logged in as': 'Tu es connecté en tant que '
+'Please sign in': 'Veuillez vous connecter'
+'Forgot Password ?': 'Mot de passe oublié ?'
+'Not Registred yet ?': 'Pas encore de compte ?'
+'Create an account': 'Créer un compte'
+'Account successfuly updated !': 'Compte bien modifié !'
+'Update Profile': 'Mise à jour du profil'
+'Apply changes': 'Appliquer les changements'
+userForm.firstname: Prénom
+userForm.lastname: Nom
+accountController.show.mustLogin: 'Vous devez vous connecté pour accéder à votre profil !'
+accountController.edit.mustLogin: 'Vous devez vous connecté pour modifier votre profil !'
+'registrationController.register.Already Connected !': 'Déjà connecté !'
+'registrationController.register.Go check your email to confirm your registration !': 'Veuillez verifier votre boite mail pour confirmer votre inscription !'
+'registrationController.verifyUserEmail.Your email address has been verified.': 'Votre email est verifié !'
+'Welcome to recipe life': 'Bienvenue sur Recette Vie'

@@ -4,3 +4,4 @@ Après extraction:
   - Rendre le script exécutable: chmod +x setup.sh
   - Lancer: ./setup.sh
 "# examen-julien-ratrapage" 
+"# examen-de-julien-septembre"  

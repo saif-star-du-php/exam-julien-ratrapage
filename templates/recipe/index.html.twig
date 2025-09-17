@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{# {% block title %}Liste de recettes{% endblock %} #}
+{% block title 'Liste de recettes' %}
+
+{% block body %}
+    
+    {% set nbRecette = recipeTotal|length %}
+    <h1 align="center">Bienvenu dans la liste des Recettes ({{ nbRecette }})</h1>
+    <div class = "container text-center">
+        <div class = "row">
+            {% include "layouts/partials/_search_data.html.twig" with {
+                monForm: monForm
+            } only %}
+            {% for recipe in recipes %}
+                <div class="card max-w-sm col-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 my-8 mr-4" data-type="post">
+                    <h2><a href={{ path('app_recipe_show', {id : recipe.id, slug : recipe.slug})}}>{{ recipe.title | u.truncate(20,'...',true)}} </a></h2>
+                    {# <p><img src = {{ recipe.imageName }} width="250" height="370"></p> #}
+                    <p><img src={{ vich_uploader_asset(recipe, 'imageFile') }} width="250" height="370"></p>
+
+                    <p>Submitted {{ recipe.createdAt |ago }}</p> 
+                    <p>By {{ recipe.user.firstname }} {{ recipe.user.lastname }}</p>
+                </div>        
+            {% else %}
+                <p>Pas encore de recette</p>
+            {% endfor %}
+        </div>
+        <br>
+        <div class="navigation d-flex justify-content-center mb-4">
+            {{ knp_pagination_render(recipes) }}
+        </div>
+    </div>
+    
+{% endblock %}
+

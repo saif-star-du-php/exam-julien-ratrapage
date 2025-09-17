@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{# {% block title %}#{{ recipe.id }} {{recipe.slug}}{% endblock %} #}
+{% block title %}{{ "#"~ recipe.id ~" "~ recipe.slug}}{% endblock %}
+{% block body %}
+<div class = "row">
+	<div  align = "center" class= "col-md-6 mx-auto">
+		<article>
+            <h1> {{ recipe.title |title }}</h1>
+            <br>
+            <img style="max-width: 400px;" src={{ vich_uploader_asset(recipe, 'imageFile') }}>
+            {# <img style="max-width: 400px;" class="bd-placeholder-img" src={{ recipe.imageName }}> #}
+            <p>By {{ recipe.user.firstname }} {{ recipe.user.lastname }}</p>
+            {# <p>Recette créée par {{ user.firstname }} {{ user.lastname }}</p> #}
+            <br>
+            <h5>{{ recipe.content | nl2br }}</h5>
+        </article>
+        <small>Submitted {{ recipe.createdAt | date('d/m/Y') }}</small>
+        <br>
+        <small>Updated {{ recipe.updatedAt | date('d/m/Y h:i') }}</small>
+        
+        <br><br>
+        {# <a class="btn btn-primary btn-sm" href={{ path('app_recipe_edit', {id: recipe.id}) }}>Edit Recipe</a>
+        <a class="btn btn-danger btn-sm" href="#" onclick="event.preventDefault(); confirm('Are you sure you want to delete this recipe ?') && document.getElementById('js-recipe-delete-form').submit();">Delete</a>
+        <a class="btn btn-secondary btn-sm" href={{ path('app_recipe_index') }}>Go Back</a>
+        <form id="js-recipe-delete-form" action={{ path('app_recipe_delete', {id: recipe.id}) }} method="post" style="display:none;">
+        </form> #}
+        {% if app.user %}
+            {% if app.user.email is same as(recipe.user.email) %}
+                <a class="btn btn-primary btn-sm" href={{ path('app_recipe_edit', {id: recipe.id}) }}>Edit Recipe</a>
+                <a class= "btn btn-danger btn-sm" href={{ path('app_recipe_delete', {id: recipe.id}) }} onclick="return confirm('Are you sure you want to delete this recipe?')">Delete</a>
+            {% endif %}
+        {% endif %}
+        <a class="btn btn-secondary btn-sm" href={{ path('app_recipe_index') }}>Go Back</a>
+{# <p>Recette créée par {{ user.firstname ~" "~ user.lastname }}</p> #}
+{# {{ dump(user) }} #}
+{# {{ dump(app.current_route) }} #}
+    </div>
+</div>
+{% endblock %}
+

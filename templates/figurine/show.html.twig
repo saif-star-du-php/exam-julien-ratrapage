@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <h1>{{ figurine.title }}</h1>
+  <img src="{{ figurine.imageName }}" style="max-width:600px; width:100%;" alt="{{ figurine.title }}">
+  <p>{{ figurine.description }}</p>
+  <p>Prix: {{ figurine.price|number_format(2, ',', ' ') }} €</p>
+  <p>Auteur: {{ figurine.author.firstname }} {{ figurine.author.lastname }}</p>
+  <p>Publié: {{ figurine.createdAt|date('d/m/Y H:i') }}</p>
+  <a href="{{ path('app_figurine_index') }}" class="btn btn-secondary">Retour</a>
+  {% if app.user and app.user.id == figurine.author.id %}
+    <a href="{{ path('app_figurine_edit', {id: figurine.id}) }}" class="btn btn-primary">Éditer</a>
+    <a href="{{ path('app_figurine_delete', {id: figurine.id}) }}" class="btn btn-danger">Supprimer</a>
+  {% endif %}
+{% endblock %}

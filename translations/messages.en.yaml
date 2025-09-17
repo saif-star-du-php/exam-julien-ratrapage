@@ -1,0 +1,50 @@
+vich_uploader.form_label.delete_confirm: 'Delete?'
+vich_uploader.link.download: Download
+recipeForm.title: Tilte
+recipeForm.content: Content
+recipeForm.duration: 'Duration in minutes'
+recipeForm.imageName: "Link of image"
+recipeForm.save: Save
+navBar.home: Home
+navBar.recipes: 'Recipes'
+navBar.addRecipe: 'Create Recipe'
+navBar.signUp: "Sign Up"
+navBar.logout: 'Logout'
+navBar.login: 'Sign In'
+navBar.account: 'My account'
+registerTemplate.title: Registration
+registerTemplate.button: "Register"
+registrationForm.firstname: Firstname
+registrationForm.lastname: Lastname
+registrationForm.email: 'Email'
+registrationForm.password: 'Password'
+registrationForm.agreeTerms: 'Accept terms'
+recipeController.emailNotVerified: "Your email address is not verified !"
+recipeController.edit.confirmEmail: 'You must confirm your email address to edit a recipe !'
+recipeController.edit.userRecipe1: 'You must be '
+recipeController.edit.userRecipe2: ' to edit this recipe !'
+recipeController.edit.mustLogin: 'You must login to edit a recipe !'
+recipeController.edit.recipeEditConfirm: 'The recipe has been correctly modified !'
+recipeController.create.mustConfirmEmail: 'You must confirm your email address to create a recipe !'
+recipeController.create.mustLogin: 'You must login to create a recipe !'
+recipeController.create.p1: 'The recipe '
+recipeController.create.p2: ' has been correctly created'
+recipeController.index.emailNotVerified: "Your email address is not verified"
+accountShow.profile: 'My account'
+accountShow.Accountcreatedon: 'Date of creation : '
+accountShow.EditAccount: 'Edit account'
+'You are logged in as': 'You are logged in as '
+'Please sign in': 'Please sign in'
+'Forgot Password ?': 'Forgot Password ?'
+'Not Registred yet ?': 'Not Registred yet ?'
+'Create an account': 'Create an account'
+'Account successfuly updated !': 'Account successfuly updated !'
+'Update Profile': 'Update Profile'
+'Apply changes': 'Apply changes'
+userForm.firstname: Firstname
+userForm.lastname: Lastname
+accountController.show.mustLogin: 'You must be connected to access on your account !'
+accountController.edit.mustLogin: 'You must be connected to edit your account !'
+'registrationController.register.Already Connected !': 'Already connected !'
+'registrationController.register.Go check your email to confirm your registration !': 'Go check your email to confirm your registration !'
+'registrationController.verifyUserEmail.Your email address has been verified.': 'Your email address has been verified !'

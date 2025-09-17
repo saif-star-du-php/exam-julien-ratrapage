@@ -1,0 +1,2 @@
+user.emailUnique: 'This email address is already used'
+registrationForm.agreeTerms.isTrue: 'You should agree to our terms'
